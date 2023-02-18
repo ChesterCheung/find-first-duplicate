@@ -1,5 +1,12 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  let duplicate = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] in duplicate){
+    return arr[i]
+   } 
+   duplicate[arr[i]] = 1
+  }
+   return -1
 }
 
 if (require.main === module) {
@@ -15,5 +22,9 @@ if (require.main === module) {
 
 module.exports = findFirstDuplicate;
 
-// Please add your pseudocode to this file
-// And a written explanation of your solution
+// assign existing array to new variable
+// set for loop, initialize counter to 0
+// set initialization end when [i] = array.length
+// i ++ 
+// set if conditional dupplicate array [i] === original array[i] return [i]
+// if no match return -1
